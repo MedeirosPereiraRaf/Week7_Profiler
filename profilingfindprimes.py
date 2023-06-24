@@ -14,9 +14,8 @@ def findPrimes(num):
     primes = []
     for i in range(num):
         p = guess()
-        while not isPrime(p):
-            p = guess()
-        primes += [p]
+        if isPrime(p):
+            primes += [p]
     return primes
 
 import cProfile
